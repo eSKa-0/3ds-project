@@ -9,3 +9,13 @@ sudo ./install-devkitpro-pacman
 ``` ubuntu
 sudo dkp-pacman -S devkitARM libctru
 ```
+## Compile
+```
+make
+```
+## Run
+1. Copy the `.3dsx` file to the `\3ds\` folder on your SD card
+2. Launch it through the Homebrew Launcher
+
+### Next on the list
+Turn the compiled code into `.cia` files for easy installation and running.
