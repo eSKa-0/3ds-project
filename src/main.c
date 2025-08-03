@@ -3,16 +3,15 @@
 
 int main() {
     gfxInitDefault();
-    consoleInit(GFX_TOP, NULL);
+    PrintConsole topScreen;
+    consoleInit(GFX_TOP, &topScreen);
 
-    printf("Hello, 3DS World!");
+    printf("Hello from Milo's 3DS!");
 
     while (aptMainLoop()) {
         hidScanInput();
         u32 kDown = hidKeysDown();
-
-        if (kDown & KEY_START) break; // Exit with START button
-
+        if (kDown & KEY_START) break; // Exit when START is pressed
         gfxFlushBuffers();
         gfxSwapBuffers();
         gspWaitForVBlank();
